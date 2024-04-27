@@ -1,0 +1,126 @@
+{% load static %}
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Example</title>
+  <style>
+        body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    nav ul li {
+      float: left;
+    }
+
+    nav ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+    }
+
+    nav ul li a.active {
+      background-color: #4CAF50;
+    }
+
+
+    body {
+            background-image: url('https://cdn.cnn.com/cnnnext/dam/assets/200417125229-01-coronavirus-cdc-image-super-tease.jpg');
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin: 0;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .login-button {
+            margin-right: 20px;
+        }
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card h2 {
+            margin: 0;
+            padding: 10px 0;
+        }
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+     table {
+            width: 75%;
+            border-collapse: collapse;
+            background-color: grey;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: black;
+        }
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="{% url 'home' %}" class="active">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'services' %}">Services</a></li>
+      <li><a href="{% url 'states' %}">States_Data</a></li>
+      <li><a href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+{% block body %}
+
+{% endblock %}
+</body>
+</html>

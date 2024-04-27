@@ -1,0 +1,26 @@
+{% extends 'Navbar.html' %}
+<html>
+<head>
+    <title>COVID-19 Tracker</title>
+
+</head>
+<body>
+{% block body %}
+    <h1>COVID-19 Tracker</h1>
+    <div class="content">
+        <div class="card">
+            <h2>Total Cases: {{ total_cases }}</h2>
+        </div>
+        <div class="card">
+            <h2>Active Cases: {{ active_cases }}</h2>
+        </div>
+        <div class="card">
+            <h2>Recovered: {{ recovered }}</h2>
+        </div>
+        <div class="card">
+            <h2>Deaths: {{ deaths }}</h2>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

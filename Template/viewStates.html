@@ -1,0 +1,32 @@
+{% extends 'Navbar.html' %}
+<html>
+<body>
+{% block body %}
+<h2>States Data</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>State</th>
+            <th>Cases</th>
+            <th>Deaths</th>
+            <th>Recovered</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for state in states_data %}
+        <tr>
+            <td>{{ state.states }}</td>
+            <td>{{ state.cases }}</td>
+            <td>{{ state.deaths }}</td>
+            <td>{{ state.recovered }}</td>
+            <td>{{ state.active }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+</body>
+</html>
+

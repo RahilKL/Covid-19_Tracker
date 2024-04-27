@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url('https://media.post.rvohealth.io/wp-content/uploads/sites/3/2021/01/605049-COVID-19-hub-3000x1248-desktop-scaled.jpg'); /* Replace 'your_background_image_url.jpg' with the actual URL of your background image */
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Make the page take up the full height of the viewport */
+            margin: 0; /* Remove default margin */
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff; /* White background for input fields */
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff; /* Blue submit button */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+        <form method = "post" action="{% url 'login1' %}">
+            {% csrf_token %}
+            <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">Login</button>
+            </form>
+</body>
+</html>
